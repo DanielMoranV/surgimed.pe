@@ -38,6 +38,9 @@ a:hover {
   text-decoration: underline;
 }
 
+.text-xxs {
+  font-size: 9px !important;
+}
 
 .text-xs {
   font-size: 12px !important;
@@ -1373,6 +1376,86 @@ a.text-dark:hover, a.text-dark:focus {
 .card-doctor .body {
   padding: 15px 20px;
 }
+
+.card-client {
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+  max-width: 80px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(154, 159, 151, 0.2);
+  overflow: hidden;
+}
+
+.card-client .text-xl {
+  font-weight: 500;
+}
+
+.card-client .header {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+}
+
+.card-client .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(52, 53, 49, 0.36);
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+
+
+
+.card-client .header .meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s ease;
+}
+
+.card-client:hover .header .meta {
+  bottom: 5px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-client .header .meta a {
+  display: inline-block;
+  margin: 3px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #fff;
+  color: #6E807A;
+  box-shadow: 0 4px 8px rgba(154, 159, 151, 0.6);
+  transition: all .2s ease;
+}
+
+
+
+.card-client .header img {
+  width: 100%;
+}
+
+.card-client .body {
+  line-height: 0.8;
+  text-align: center;
+}
+
 
 @media (min-width: 768px) {
   .card-service {
