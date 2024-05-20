@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/surgimed-ico.ico" />
@@ -57,6 +57,17 @@
     ></script>
   </head>
   <body>
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Cargando...</p>
+    </div>
+    <a
+      href="https://api.whatsapp.com/send?phone=51941176311&text=Hola%20requiero%20informaci%C3%B3n%20de%20sus%20servicios"
+      class="btn-wsp"
+      target="_blank"
+    >
+      <i class="fa fa-whatsapp icono"></i>
+    </a>
     <!-- Back to top button -->
     <div class="back-to-top"></div>
 
@@ -164,13 +175,15 @@
             <ol
               class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2"
             >
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
               <li class="breadcrumb-item active" aria-current="page">
-                Contact
+                Contacto
               </li>
             </ol>
           </nav>
-          <h1 class="font-weight-normal">Contact</h1>
+          <h1 class="font-weight-normal">
+            Obtén Asesoría Personalizada para tus Necesidades Médicas
+          </h1>
         </div>
         <!-- .container -->
       </div>
@@ -180,83 +193,75 @@
 
     <div class="page-section">
       <div class="container">
-        <h1 class="text-center wow fadeInUp">Get in Touch</h1>
+        <h1 class="text-center wow fadeInUp">Contáctanos</h1>
 
-        <form class="contact-form mt-5">
+        <form
+          action="https://formsubmit.co/surmedequip@hotmail.com"
+          method="post"
+          class="contact-form mt-5"
+        >
+          <p class="wow fadeInUp">
+            "Sabemos que la salud de tus pacientes es tu prioridad. Por eso, en
+            Surgical Medical Equipment EIRL ofrecemos productos confiables y de
+            avanzada tecnología. Contáctanos para recibir más información y
+            descubre cómo podemos apoyarte en tu labor médica."
+          </p>
+
           <div class="row mb-3">
             <div class="col-sm-6 py-2 wow fadeInLeft">
-              <label for="fullName">Name</label>
+              <label for="fullName">Nombre</label>
               <input
                 type="text"
                 id="fullName"
                 class="form-control"
-                placeholder="Full name.."
+                placeholder="Nombre completo.."
+                name="name"
               />
             </div>
             <div class="col-sm-6 py-2 wow fadeInRight">
               <label for="emailAddress">Email</label>
               <input
-                type="text"
+                type="email"
                 id="emailAddress"
                 class="form-control"
-                placeholder="Email address.."
+                placeholder="Direccion email.."
+                name="email"
               />
             </div>
             <div class="col-12 py-2 wow fadeInUp">
-              <label for="subject">Subject</label>
+              <label for="subject">Asunto</label>
               <input
                 type="text"
                 id="subject"
                 class="form-control"
-                placeholder="Enter subject.."
+                placeholder="Ingrese Asunto.."
+                name="subject"
               />
             </div>
             <div class="col-12 py-2 wow fadeInUp">
-              <label for="message">Message</label>
+              <label for="message">Mensaje</label>
               <textarea
                 id="message"
                 class="form-control"
                 rows="8"
-                placeholder="Enter Message.."
+                placeholder="Mensaje.."
+                name="message"
               ></textarea>
             </div>
           </div>
+          <input type="hidden" name="_next" value="https://surgimed.pe" />
+          <input type="hidden" name="_captcha" value="false" />
           <button type="submit" class="btn btn-primary wow zoomIn">
-            Send Message
+            Enviar Mensaje
           </button>
         </form>
       </div>
     </div>
-
     <div class="maps-container wow fadeInUp">
       <div id="google-maps"></div>
     </div>
 
-    <div
-      class="page-section banner-home bg-image"
-      style="background-image: url(./assets/img/banner-pattern.svg)"
-    >
-      <div class="container py-5 py-lg-0">
-        <div class="row align-items-center">
-          <div class="col-lg-4 wow zoomIn">
-            <div class="img-banner d-none d-lg-block">
-              <img src="./assets/img/mobile_app.png" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-8 wow fadeInRight">
-            <h1 class="font-weight-normal mb-3">
-              Get easy access of all features using One Health Application
-            </h1>
-            <a href="#"><img src="./assets/img/google_play.svg" alt="" /></a>
-            <a href="#" class="ml-2"
-              ><img src="./assets/img/app_store.svg" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- .banner-home -->
-
     <footer class="page-footer">
       <div class="container">
         <div class="row px-md-3">
@@ -282,8 +287,8 @@
               <li>
                 <a href="https://osteotechsurgical.com/">Osteotech Surgical</a>
               </li>
-              <!-- <li><a href="#">One-Drugs</a></li>
-              <li><a href="#">One-Live</a></li> -->
+              <li><a href="https://www.bbraun.es/es.html">B Braun</a></li>
+              <!-- <li><a href="#">One-Live</a></li> -->
             </ul>
           </div>
           <div class="col-sm-6 col-lg-3 py-3">
@@ -341,7 +346,7 @@
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1UnZOhxZCE8ge5BD1owzX4HfRli0bj2Q&callback=initMap"
     ></script>
   </body>
 </html>

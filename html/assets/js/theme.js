@@ -92,3 +92,12 @@ $("document").ready(function () {
   // Page scroll animate
   new WOW().init();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("load", function () {
+    // Ocultar el spinner después de que todos los recursos se han cargado
+    document.getElementById("loading").style.display = "none";
+    // Mostrar el contenido de la página
+    document.getElementById("content").style.display = "block";
+  });
+});
